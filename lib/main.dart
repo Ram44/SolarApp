@@ -17,7 +17,9 @@ class MyApp extends StatelessWidget {
         primaryColor: kPrimaryColor,
        accentColor: kPrimaryColor,
         visualDensity: VisualDensity.adaptivePlatformDensity,
+        
       ),
+      
       home: ProductScreen(),
     );
   }

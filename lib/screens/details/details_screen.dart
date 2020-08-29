@@ -1,16 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:solarapp/container.dart';
+import 'package:solarapp/models/product.dart';
 import 'package:solarapp/screens/details/components/body.dart';
 
-
 class DetailScreen extends StatelessWidget {
+  final Product product;
+
+  const DetailScreen({Key key, this.product}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kPrimaryColor,
-      appBar: buildAppBar(context),
-      body: Body()
-    );
+        backgroundColor: kPrimaryColor,
+        appBar: buildAppBar(context),
+        body: Body(
+          product: product,
+        ));
   }
 
   AppBar buildAppBar(BuildContext context) {
